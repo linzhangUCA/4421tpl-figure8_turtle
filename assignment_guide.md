@@ -1,19 +1,17 @@
 # Figure 8 Turtlesim
 
 ## 1. Overview
-Just like an orchastra play symphony under the coordination of a conductor.
-A robotic system can be orchastrated by the Robot Operating System (ROS). 
-As the orchastra is composed with members playing a variety of instruments.
-The robotic system featured with **nodes** interacting with the hardware.
-ROS allows the nodes to communicate with each other through **topics**.
-And each topic is strictly constrained by a type of **message** (instrument).
+Just as an orchestra creates a symphony through the coordination of many musicians, a robot is orchestrated by the Robot Operating System (**ROS**).
+ROS relies on **nodes**(musicians) to perform specific tasks, such as reading sensors or controlling actuators.
+When nodes need to communicate and cooperate with each other, they use **topics** (instruments). 
+A topic bears **messages** (notes) allowing the nodes to respond to it.
+Just like a violin section only plays violin notes, each ROS Topic is strictly constrained to a specific message type.
 
-In this assignment, you will practice orchastrating the nodes of a simulated robot by drawing figure 8s in the `turtlesim`.
-To achieve this, you will need to:
-- Start the turtlesim node.
-- Create a node to
-  - subscribe to the turtle's pose
-  - publish velocity commands to drive the turtle.   
+In this assignment, you will practice orchestrating a simulated robot to "dance" in a figure-8 pattern.
+To achieve this, you will:
+- Launch the Simulation: Start the `/turtlesim_node` to bring a robotic turtle to life.
+- Create a node to interact with the `/turtlesim_node`
+- Publish a topic with strictly formatted message to drive the turtle. 
 
 ## Objectives
 - Get familiar with ROS concepts, such as [node](https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html) and 
