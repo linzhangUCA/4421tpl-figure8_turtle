@@ -47,6 +47,7 @@ Please complete [turtle_eight.py](turtle_eight.py) and make the turtle create fi
 - The turtle will start at the defult pose (center of the canvas facing towards right).
 - The turtle is expected to draw the top circle **couterclockwisely** with the radius of **1**.
 - The turtle is expected to draw the bottom circle **clockwisely** with the radius of **2**.
+- Change turtle's direction **every time** when it gets back to the starting location.
 - The angular speed of the turtle has to be fixed at **$\frac{\pi}{4}$ rad/s** (changing direction should not affect the scale of the speed).
 - The turtle's trajectory (figure-8 pattern) needs to be inscribed within the two red squares (See image below for an example).
 
@@ -62,7 +63,7 @@ Please complete [turtle_eight.py](turtle_eight.py) and make the turtle create fi
 ```
 
 ### 3.2. Create a node
-- with name: `/<your_name>/turtle_8`
+- Start your node with name: `/<your_name>/turtle8`
 
 > [!WARNING]
 > Your assignment will not be graded if `<your_name>` is unidentifiable.
@@ -78,10 +79,14 @@ Please complete [turtle_eight.py](turtle_eight.py) and make the turtle create fi
 
 ### 3.4. Plan turtle's trajectory
 > [!IMPORTANT]
-> Given the angular velocity, $\omega$ and the radius ($R$) of a **circular motion**, what would be a good linear velocity $v$?
+> Given the angular velocity, $\omega$ (rad/s) and the radius, $R$ (m), of a **circular motion**, what would be a good linear velocity $v$ (m/s) for the turtle?
 
-- Please write down the math equation for calculating this in the [README](README.md)
-- 
+- Please write down the math equation of the linear velocity in the [README](README.md).
+- Please plug in the required radius of the circles to the equation.
+  Calculate and write down the linear velocity values for these circles in the [README](README.md).
+- Please calculate the time needed for the turtle to finish one lap of a circle.
+  Analyze the temporal difference between travelling the top circle and the bottom circle.
+  And write your analysis down in [README](README.md).
 
 ### 3.5. Drive the turtle
 - Set up a publisher (and optionally, a timer) to "talk" about the turtle's velocity commands under an appropriate topic.
