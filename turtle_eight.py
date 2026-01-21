@@ -10,12 +10,12 @@ from math import pi
 
 class Figure8Node(Node):
     def __init__(self):
-        super().__init__("turtle8")
+        super().__init__("fig8_node")
         # Draw boundary
         self.set_red_cli = self.create_client(SetPen, "/turtle1/set_pen")
         while not self.set_red_cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info("set pen service not available, waiting again...")
-        self.set_red_req(255, 2)
+        self.set_red_request(255, 2)
 
         self.teleport_cli = self.create_client(
             TeleportAbsolute, "/turtle1/teleport_absolute"
@@ -35,31 +35,39 @@ class Figure8Node(Node):
             (5.544445, 5.544445),
         )
         for b in bounds:
-            self.request_for_teleport(b[0], b[1])
+            self.teleport_request(b[0], b[1])
 
-        self.set_red_req(0, 5)
+        self.set_red_request(0, 5)
 
-        # Topic publisher and subscriber
-        self.pose_listener = self.create_subscription(
-            Pose, "/turtle1/pose", self.pin_turtle, 1
-        )
-        self.cmd_talker = self.create_publisher(Twist, "/turtle1/cmd_vel", 1)
-        self.cmd_pub_timer = self.create_timer(0.05, self.cmd_pub)
+        ### START CODING HERE ###
+        self.pose_listener = None  # set up subscriber
+        self.cmd_talker = None  # set up publisher
+        self.cmd_pub_timer = None  # set up timer
+        # Constants
+        self.ang_vel = None  # angular velocity
         # Variables
-        self.circle_counter = 0
-        self.ang_z = pi / 4
-        self.is_clockwise = True
+        self.circle_counter = None  # pair with pub freq to switch ang_vel dir
+        self.is_clockwise = None  # flag for ang_vel direction
 
-    def pin_turtle(self, pose_msg):
-        self.get_logger().info(f"Turtle's status: \n{pose_msg}")
+        ### END CODING HERE ###
 
     ### START CODING HERE ###
-    def cmd_pub(self):
+    def subscriber_callback_function(
+        self, pose_msg
+    ):  # feel free to rename the function
+        self.get_logger().info(
+            f"Turtle's pose: \nposition x: {None}, position y: {None}, orientation z: {None}"
+        )  # hint: extract pos.x, pos.y, ori.z from the "pose_msg"
+
+    ### END CODING HERE ###
+
+    ### START CODING HERE ###
+    def timer_callback_function(self):  # feel free to rename the function
         twist_msg = None
-        if self.circle_counter % None == 0:  # determine when to change augular vel direction
+        if self.circle_counter % None == 0:  # change ang_vel dir after a lap
             self.is_clockwise = not self.is_clockwise
-            
-        if self.is_clockwise == True:
+
+        if self.is_clockwise == True:  # update twist message
             twist_msg.linear.x = None
             twist_msg.angular.z = None
         else:
@@ -67,12 +75,13 @@ class Figure8Node(Node):
             twist_msg.angular.z = None
         self.cmd_talker.publish(None)
         self.circle_counter = None  # don't forget to increment counter
-        
+
         self.get_logger().debug(f"Velocity command: {twist_msg}")  # "debug" <-> "info"
+
     ### END CODING HERE ###
 
     # Service clients for drawing boundaries
-    def set_red_req(self, r, width):
+    def set_red_request(self, r, width):
         "Set pen color to red, width to 2"
         req = SetPen.Request()
         req.r = r
@@ -86,7 +95,7 @@ class Figure8Node(Node):
         else:
             self.get_logger().error("Failed to call service /turtle1/set_pen")
 
-    def request_for_teleport(self, dest_x, dest_y):
+    def teleport_request(self, dest_x, dest_y):
         "Teleport turtle to dest_x, dest_y"
         self.tp_req = TeleportAbsolute.Request()
         self.tp_req.x = dest_x
