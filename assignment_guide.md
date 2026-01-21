@@ -16,6 +16,8 @@ To achieve this, you will:
 
 
 ## 2. Get Started
+
+### 2.1. Usage
 1. Launch turtlesim (in a terminal)
 ```console
 ros2 run turtlesim turtlesim_node
@@ -28,18 +30,24 @@ python3 turtle_eight.py
 > [!TIP]
 > You can click the play button (:arrow_forward:) in your IDE (e.g. vscode, thonny) to execute your python script.
 
-### Hardware
+### 2.2. Hardware
 A computer with access to ROS Jazzy
 
-### Software
+### 2.3. Software
 - (Recommended) Ubuntu 24.04
 - (Recommended) ROS [Jazzy](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html)
 - [turtlesim](https://index.ros.org/p/turtlesim/)
 - (Optional) [VS Code](https://code.visualstudio.com/)
 
+### 2.4. Plan Turtle's Trajectory
+Please think about 
+
+> [!IMPORTANT]
+> Given the angular speed, $\omega$, of a **circular motion**, what would be the radius ($R$) of the circle?
 
 ## 3. Requirements:
 
+### 3.1. 
 1. (5%) Download and build the ROS package. 
    1. [Create a ROS workspace](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html#create-a-new-directory).
    2. Clone this repository down to the `/src` dirctory in your ROS workspace.
