@@ -9,9 +9,10 @@ Just like a violin section only plays violin notes, each ROS Topic is strictly c
 
 In this assignment, you will practice orchestrating a simulated robot to "dance" in a figure-8 pattern.
 To achieve this, you will:
-- Launch the Simulation: Start the `/turtlesim_node` to bring a robotic turtle to life.
-- Create a node to interact with the `/turtlesim_node`
-- Publish a topic with strictly formatted message to drive the turtle. 
+- Launch the Simulation: Start the `turtlesim` node to bring a robotic turtle to life.
+- Create a node to interact with the `turtlesim` node.
+- Subscribe to a topic to monitor the robot's motion status.
+- Publish a topic with strictly formatted message to drive the robot. 
 
 
 ## 2. Get Started
@@ -37,7 +38,8 @@ A computer with access to ROS Jazzy
 - (Optional) [VS Code](https://code.visualstudio.com/)
 
 
-## Requirements: 
+## 3. Requirements:
+
 1. (5%) Download and build the ROS package. 
    1. [Create a ROS workspace](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html#create-a-new-directory).
    2. Clone this repository down to the `/src` dirctory in your ROS workspace.
