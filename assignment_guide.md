@@ -88,31 +88,17 @@ Please complete [turtle_eight.py](turtle_eight.py) and make the turtle create fi
   Analyze the temporal difference between travelling the top circle and the bottom circle.
   And write your analysis down in [README](README.md).
 
-### 3.5. Drive the turtle
+### 3.5. Draw figure-8
 - Set up a publisher (and optionally, a timer) to "talk" about the turtle's velocity commands under an appropriate topic.
-- Use the right message type for the topic.
-- Plan topic publishing rate according to the simulation result
+- Embed the calculated velocity to the message with the right type for the topic.
+- Switch the direction of the turtle at the right instant.
 - The turtle has to draw identical 8️⃣ figures from lap to lap.
 
 ![example_fig8](turtlesim_play_pkg/images/example_fig8.gif)
 
-3. (10%) Let the turtle complete at least five laps then upload your figure 8 to the [images/](turtlesim_play_pkg/images/) directory.
-   Illustrate Your turtle's execution below (edit next line in this [README](README.md)):
+### 3.6. Upload your turtle's footprints
+- Let your turtle complete at five figures then display your turtle's figure-8 footprints in [README](README.md).
    
    
-5. (5%) Fill the `<description>`, `<maintainer>`, `<maintainer_email>` fields with your own information in [package.xml](turtlesim_play_pkg/package.xml) and [setup.py](turtlesim_play_pkg/setup.py).
-Look for the fields marked with `TODO` in these files.
-
-## Study Resources
-
-### Circular Motion Kinematics
-Given an object is doing the circular motion in constant linear/angular velocity. 
-The relationship between the linear and angular velocity is shown as the following figure, where $$r$$ is the radius of the circle.
-
-![lin_ang_vel](https://yairshinar.com/wp-content/uploads/2018/12/c99655fa7435cc516bb40ac7daaa51c9.jpg)
-
-### Linux Command Line Tutorial
-[https://ubuntu.com/tutorials/command-line-for-beginners#1-overview](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)
-
-## AI Policies
-Please acknowledge AI's contributions according to the policies in the [syllabus](https://linzhanguca.github.io/_docs/robotics2-2025/syllabus.pdf).
+### 3.7 AI Policies
+Please acknowledge AI's contributions according to the policies in the syllabus.
