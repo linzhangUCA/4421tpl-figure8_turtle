@@ -45,12 +45,12 @@ Please complete [turtle_eight.py](turtle_eight.py) and make the turtle create fi
 
 ### 3.1. General rules
 - The turtle will start at the defult pose (center of the canvas facing towards right).
-- The turtle's trajectory (figure-8 pattern) needs to be inscribed within the two red squares (See image below for an example).
 - The turtle is expected to draw the top circle **couterclockwisely** with the radius of **1**.
 - The turtle is expected to draw the bottom circle **clockwisely** with the radius of **2**.
 - The angular speed of the turtle has to be fixed at **$\frac{\pi}{4}$ rad/s** (changing direction should not affect the scale of the speed).
+- The turtle's trajectory (figure-8 pattern) needs to be inscribed within the two red squares (See image below for an example).
 
- ![fig8_practice](turtlesim_play_pkg/images/fig8_practice.png)
+ ![fig8_example](/images/fig8_example.png)
 
 > [!WARNING]
 > Please focus on the code wrapped around the comments showing below.
@@ -63,6 +63,9 @@ Please complete [turtle_eight.py](turtle_eight.py) and make the turtle create fi
 
 ### 3.2. Create a node
 - with name: `/<your_name>/turtle_8`
+
+> [!WARNING]
+> Your assignment will not be graded if `<your_name>` is unidentifiable.
 
 ### 3.3. Keep an eye on the motion status
 - Set up a subscriber and "listen" to the appropriate topic which contains the turtle's pose and velocity.
