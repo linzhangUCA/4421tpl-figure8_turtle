@@ -7,4 +7,4 @@
 
 ## Custom Figure-8 Screenshot
 
-[!custom_fig8](images/custom_fig8.png)
+![custom_fig8](images/custom_fig8.png)
