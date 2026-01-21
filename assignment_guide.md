@@ -13,11 +13,29 @@ To achieve this, you will:
 - Create a node to interact with the `/turtlesim_node`
 - Publish a topic with strictly formatted message to drive the turtle. 
 
-## Objectives
-- Get familiar with ROS concepts, such as [node](https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html) and 
-[topic](https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html).
-- Manage a ROS [package](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html) with an [executable](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html).
-- Practice node execution with topic [publisher and subscriber](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html).
+
+## 2. Get Started
+1. Launch turtlesim (in a terminal)
+```console
+ros2 run turtlesim turtlesim_node
+```
+2. Test your code (in a new terminal)
+```console
+python3 turtle_eight.py
+```
+
+> [!TIP]
+> You can click the play button (:arrow_forward:) in your IDE (e.g. vscode, thonny) to execute your python script.
+
+### Hardware
+A computer with access to ROS Jazzy
+
+### Software
+- (Recommended) Ubuntu 24.04
+- (Recommended) ROS [Jazzy](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html)
+- [turtlesim](https://index.ros.org/p/turtlesim/)
+- (Optional) [VS Code](https://code.visualstudio.com/)
+
 
 ## Requirements: 
 1. (5%) Download and build the ROS package. 
