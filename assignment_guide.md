@@ -114,6 +114,9 @@ Please complete [turtle_eight.py](turtle_eight.py) and make the turtle create fi
 
 - Let your turtle complete at five figures then display your turtle's figure-8 footprints in [README](README.md).
 
+> [!WARNING]
+> Your assignment will not be graded if the screenshot is missing.
+
 ### 3.7 AI Policies
 
 Please acknowledge AI's contributions according to the policies in the syllabus.
