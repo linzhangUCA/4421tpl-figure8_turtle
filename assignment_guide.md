@@ -43,7 +43,7 @@ A computer with access to ROS Jazzy
 Please think about the following question.
 
 > [!IMPORTANT]
-> Given the angular speed, $\omega$, of a **circular motion**, what would be the radius ($R$) of the circle?
+> Given the angular velocity, $\omega$ and the radius ($R$) of a **circular motion**, what would be a good linear velocity $v$?
 
 ## 3. Requirements:
 Please complete [turtle_eight.py](turtle_eight.py) and fulfill the following requirements.
@@ -63,7 +63,12 @@ Replace the `None`s with apt operations.
 
 ### 3.2 Keep an eye on the motion status
 - Set up a subscriber and "listen" to the appropriate topic which contains the turtle's pose and velocity.
-- Print out turtle's 
+  Take out the message embedded in the topic.
+- Print the turtle's pose to the screen at a frequency of 5Hz.
+  Please encode the turtle's pose with the format below:
+  ```python
+  f"Turtle's pose: \nposition x: {position_x}, position y: {position_y}, orientation z: {orientation_z}"
+  ```
 1. (5%) Download and build the ROS package. 
    1. [Create a ROS workspace](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html#create-a-new-directory).
    2. Clone this repository down to the `/src` dirctory in your ROS workspace.
