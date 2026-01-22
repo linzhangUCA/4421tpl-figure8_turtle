@@ -71,46 +71,47 @@ Please complete [turtle_eight.py](turtle_eight.py) and make the turtle create fi
 ### END CODING HERE ###
 ```
 
-### 3.2. Create a node
+### 3.2. (5%) Create a node
 
 - Start your node with name: `/<your_name>/turtle8`
 
 > [!WARNING]
 > Your assignment will not be graded if `<your_name>` is unidentifiable.
 
-### 3.3. Keep an eye on the motion status
+### (30%) 3.3. Keep an eye on the motion status
 
-- Set up a subscriber and "listen" to the appropriate topic which contains the turtle's pose and velocity.
+- (20%) Set up a subscriber and "listen" to the appropriate topic which contains the turtle's pose and velocity.
   Take out the message embedded in the topic.
-- Print the turtle's pose to the screen at a frequency of 5Hz.
+- (10%) Print the turtle's pose to the screen at a frequency of 5Hz.
   Please encode the turtle's pose with the format below:
 
   ```python
   f"Turtle's pose: \nposition x: {position_x}, position y: {position_y}, orientation z: {orientation_z}"
   ```
 
-### 3.4. Plan turtle's trajectory
+### (15%) 3.4. Plan turtle's trajectory
 >
 > [!IMPORTANT]
 > Given the angular velocity, $\omega$ (rad/s) and the radius, $R$ (m), of a **circular motion**, what would be a good linear velocity $v$ (m/s) for the turtle?
 
-- Please write down the math equation of the linear velocity in the [README](README.md).
-- Please plug in the required radius of the circles to the equation.
+- (5%) Please write down the math equation of the linear velocity in the [README](README.md).
+- (5%) Please plug in the required radius of the circles to the equation.
   Calculate and write down the linear velocity values for these circles in the [README](README.md).
-- Please calculate the time needed for the turtle to finish one lap of a circle.
+- (5%) Please calculate the time needed for the turtle to finish one lap of a circle.
   Analyze the temporal difference between travelling the top circle and the bottom circle.
   And write your analysis down in [README](README.md).
 
-### 3.5. Draw figure-8
+### (40%) 3.5. Draw figure-8
 
-- Set up a publisher (and optionally, a timer) to "talk" about the turtle's velocity commands under an appropriate topic.
-- Embed the calculated velocity to the message with the right type for the topic.
-- Switch the direction of the turtle at the right instant.
-- The turtle has to draw identical 8️⃣ figures from lap to lap.
+- (10%) Set up a publisher (and optionally, a timer) to "talk" about the turtle's velocity commands under an appropriate topic.
+- (20%) Embed the calculated velocity to the message with the right type for the topic.
+- (10%) Switch the direction of the turtle at the right instant.
 
-![example_fig8](turtlesim_play_pkg/images/example_fig8.gif)
+> [!NOTE]
+> The turtle has to draw identical 8️⃣ figures from lap to lap.
 
-### 3.6. Upload your turtle's footprints
+
+### (10%) 3.6. Upload your turtle's footprints
 
 - Let your turtle complete at five figures then display your turtle's figure-8 footprints in [README](README.md).
 
